@@ -1,51 +1,254 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Resume</title>
+    <title>Resume | Akhtar Hussain</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #0f172a;
+            background-image:
+                radial-gradient(at 27% 37%, hsla(215, 98%, 61%, 0.1) 0px, transparent 50%),
+                radial-gradient(at 97% 21%, hsla(125, 98%, 72%, 0.1) 0px, transparent 50%),
+                radial-gradient(at 52% 99%, hsla(355, 98%, 61%, 0.1) 0px, transparent 50%),
+                radial-gradient(at 10% 29%, hsla(256, 96%, 61%, 0.1) 0px, transparent 50%),
+                radial-gradient(at 97% 96%, hsla(38, 60%, 74%, 0.1) 0px, transparent 50%),
+                radial-gradient(at 33% 50%, hsla(222, 67%, 73%, 0.1) 0px, transparent 50%),
+                radial-gradient(at 79% 53%, hsla(343, 68%, 79%, 0.1) 0px, transparent 50%);
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .scroll-reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+            will-change: opacity, transform;
+        }
+
+        .scroll-reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0f172a;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #4a5568;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #718096;
+        }
+    </style>
 </head>
-<body>
-    <header>
-        <h1 style="text-align: center;">Resume</h1>
-    </header>
-    <h1>I Akhtar hussain</h1>
-    <p>trying to become a skilled web developer while specializing in AI and cybersecurity, applying my passion for technology and problem-solving abilities to create secure and innovative web solutions.</p>
-    <hr>
-    <h2>Education</h2>
-    <ul>
-    <li><p>Pursuing B.Tech in Artificial Intelligence - GHRCE nagpur, India.(2022-till)</p></li>
-    </ul>
-    <hr>
-    <h2>Work experince</h2>
-    <ul>
-    <li><p>Not yet but eager to learn & work.</p></li>
-    </ul>
-    <hr>
-    <h2>Skills</h2>
-    <ul>
-        <li>web develpoment (learning)</li>
-        <li>Basic C & Python</li>
-        <li>MS-Office</li>
-        <li>Planning</li>
-    </ul>
-    <hr>
-    <h2>Hobbies</h2>
-    <ul>
-        <li>Football</li>
-        <li>Photography</li>
-        <li>Walking</li>
-        <li>Hacking</li>
-        <li>Drawing</li>
-    </ul>
-    <hr>
-    <ul>
-        <li style="list-style: none;">contact :</li>
-        <li>Email me : akhtarladkhi@gmail.com</li>
-    </ul>
-    <hr>
-    <footer>
-     <p>&#169 Akhtar Hussain. All rights reserved.</p>
-    </footer>
+<body class="text-slate-300">
+
+    <div class="max-w-7xl mx-auto p-4 sm:p-6 lg:p-8">
+        <div class="lg:grid lg:grid-cols-12 lg:gap-12">
+            
+            <header class="lg:col-span-4 lg:sticky lg:top-8 lg:h-screen">
+                <div class="flex flex-col space-y-6">
+                    <div>
+                        <h1 class="text-4xl font-bold text-white">Akhtar Hussain</h1>
+                        <h2 class="mt-2 text-lg font-medium text-sky-300">B.Tech, Artificial Intelligence, 2026</h2>
+                        <p class="mt-2 text-sm text-slate-400">CGPA: 7.9</p>
+                    </div>
+
+                    <ul class="space-y-3 text-sm">
+                        <li class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-3 text-sky-400" viewBox="0 0 20 20" fill="currentColor">
+                                <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+                                <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+                            </svg>
+                            <a href="mailto:akhtar.hussain.ai@ghrce.raisoni.net" class="hover:text-sky-300 transition-colors">akhtar.hussain.ai@ghrce.raisoni.net</a>
+                        </li>
+                        <li class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-3 text-sky-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                            </svg>
+                            <span>6006956793</span>
+                        </li>
+                        <li class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-3 text-sky-400" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                            </svg>
+                            <a href="https://www.linkedin.com/in/ibex-akhtar" target="_blank" rel="noopener noreferrer" class="hover:text-sky-300 transition-colors">linkedin.com/in/ibex-akhtar</a>
+                        </li>
+                        <li class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="h-5 w-5 mr-3 text-sky-400">
+                                <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
+                            </svg>
+                            <a href="https://github.com/ibexdev-01" target="_blank" rel="noopener noreferrer" class="hover:text-sky-300 transition-colors">github.com/ibexdev-01</a>
+                        </li>
+                    </ul>
+                </div>
+            </header>
+
+            <main class="lg:col-span-8 mt-12 lg:mt-0">
+                
+                <section id="skills" class="mb-12 scroll-reveal">
+                    <h3 class="text-xl font-bold text-white mb-4 uppercase tracking-wider">Technical Proficiency</h3>
+                    <div class="glass-card rounded-lg p-6">
+                        <div class="flex flex-wrap gap-2">
+                           <span class="bg-sky-500/20 text-sky-300 text-sm font-medium px-3 py-1 rounded-full">Artificial Intelligence</span>
+                           <span class="bg-sky-500/20 text-sky-300 text-sm font-medium px-3 py-1 rounded-full">Machine Learning</span>
+                           <span class="bg-sky-500/20 text-sky-300 text-sm font-medium px-3 py-1 rounded-full">Data Science</span>
+                           <span class="bg-sky-500/20 text-sky-300 text-sm font-medium px-3 py-1 rounded-full">Python</span>
+                           <span class="bg-sky-500/20 text-sky-300 text-sm font-medium px-3 py-1 rounded-full">Flutter</span>
+                           <span class="bg-sky-500/20 text-sky-300 text-sm font-medium px-3 py-1 rounded-full">Full Stack Development</span>
+                           <span class="bg-sky-500/20 text-sky-300 text-sm font-medium px-3 py-1 rounded-full">FastAPI</span>
+                           <span class="bg-sky-500/20 text-sky-300 text-sm font-medium px-3 py-1 rounded-full">JavaScript</span>
+                           <span class="bg-sky-500/20 text-sky-300 text-sm font-medium px-3 py-1 rounded-full">HTML+CSS</span>
+                           <span class="bg-sky-500/20 text-sky-300 text-sm font-medium px-3 py-1 rounded-full">Git</span>
+                           <span class="bg-sky-500/20 text-sky-300 text-sm font-medium px-3 py-1 rounded-full">Github</span>
+                           <span class="bg-sky-500/20 text-sky-300 text-sm font-medium px-3 py-1 rounded-full">Prompt Engineering</span>
+                           <span class="bg-sky-500/20 text-sky-300 text-sm font-medium px-3 py-1 rounded-full">Figma</span>
+                           <span class="bg-sky-500/20 text-sky-300 text-sm font-medium px-3 py-1 rounded-full">Canva</span>
+                           <span class="bg-sky-500/20 text-sky-300 text-sm font-medium px-3 py-1 rounded-full">C++</span>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="projects" class="mb-12 scroll-reveal">
+                    <h3 class="text-xl font-bold text-white mb-4 uppercase tracking-wider">Projects</h3>
+                    <div class="space-y-6">
+                        <div class="glass-card rounded-lg p-6 hover:border-sky-400/50 transition-all duration-300 group">
+                           <p class="text-xs text-slate-400 mb-1">Jun 2025 - Present</p>
+                           <h4 class="font-bold text-lg text-white group-hover:text-sky-300 transition-colors">Brand Clothing Website (Clauch Clothings)</h4>
+                           <p class="mt-2 text-sm leading-relaxed">Developing a B2B custom apparel website using Django and Tailwind CSS for a clothing brand, aiming to simplify bulk order customization for businesses.</p>
+                           <ul class="mt-3 list-disc list-inside text-sm space-y-1 text-slate-400">
+                               <li>Built an interactive customization page for personalizing apparel with colors, logos, and designs.</li>
+                               <li>Integrated real-time preview and download functionality for customized mockups.</li>
+                               <li>Implemented a B2B-tailored order submission system for bulk orders with size/quantity breakdowns.</li>
+                               <li>Focused on clean, responsive UI/UX using Tailwind CSS for a smooth cross-device experience.</li>
+                           </ul>
+                        </div>
+                        <div class="glass-card rounded-lg p-6 hover:border-sky-400/50 transition-all duration-300 group">
+                           <p class="text-xs text-slate-400 mb-1">May 2025 - Present</p>
+                           <h4 class="font-bold text-lg text-white group-hover:text-sky-300 transition-colors">Scalable E-commerce App</h4>
+                           <p class="mt-2 text-sm leading-relaxed">Designed and developed a scalable e-commerce mobile application using Flutter, FastAPI, Firebase, and Razorpay, focused on seamless user experience and modular architecture.</p>
+                           <ul class="mt-3 list-disc list-inside text-sm space-y-1 text-slate-400">
+                               <li>Built a fully responsive Flutter frontend with Riverpod state management.</li>
+                               <li>Integrated Firebase authentication and JWT-Based API security.</li>
+                               <li>Developed backend APIs using FastAPI with structured Pydantic models.</li>
+                               <li>Integrated Razorpay for smooth in-app payment processing.</li>
+                           </ul>
+                        </div>
+                        <div class="glass-card rounded-lg p-6 hover:border-sky-400/50 transition-all duration-300 group">
+                           <p class="text-xs text-slate-400 mb-1">Aug 2024</p>
+                           <h4 class="font-bold text-lg text-white group-hover:text-sky-300 transition-colors">AI-powered Traffic Light Simulation</h4>
+                           <p class="mt-2 text-sm leading-relaxed">Developed a proof-of-concept for SIH 2024 using Python and Pygame, focused on optimizing traffic signal efficiency through dynamic queue-based logic.</p>
+                           <ul class="mt-3 list-disc list-inside text-sm space-y-1 text-slate-400">
+                               <li>Designed and simulated an intelligent traffic system that prioritizes intersections with longer vehicle queues.</li>
+                               <li>Implemented dynamic green signal allocation based on estimated clearance time.</li>
+                               <li>Lays the groundwork for future AI-powered traffic management solutions.</li>
+                           </ul>
+                        </div>
+                        <div class="glass-card rounded-lg p-6 hover:border-sky-400/50 transition-all duration-300 group">
+                           <p class="text-xs text-slate-400 mb-1">Jan 2024</p>
+                           <h4 class="font-bold text-lg text-white group-hover:text-sky-300 transition-colors">Fake Job Listing Identification using ML</h4>
+                           <p class="mt-2 text-sm leading-relaxed">Developed a machine learning-based system to identify fraudulent job listings using job descriptions and company metadata for a hackathon.</p>
+                           <ul class="mt-3 list-disc list-inside text-sm space-y-1 text-slate-400">
+                               <li>Performed extensive data preprocessing, including handling missing values and class imbalance.</li>
+                               <li>Applied and optimized feature selection techniques to improve model generalization.</li>
+                               <li>Achieved 98.6% accuracy using ensemble learning methods.</li>
+                           </ul>
+                        </div>
+                    </div>
+                </section>
+                
+                <section id="education" class="mb-12 scroll-reveal">
+                    <h3 class="text-xl font-bold text-white mb-4 uppercase tracking-wider">Education</h3>
+                    <div class="space-y-4">
+                        <div class="glass-card rounded-lg p-6">
+                            <p class="text-sm text-slate-400">2022 - 2026</p>
+                            <h4 class="font-bold text-lg text-white">B.Tech, Artificial Intelligence</h4>
+                            <p class="text-slate-300">G H Raisoni College of Engineering, Nagpur</p>
+                            <p class="text-sm text-slate-400">CGPA: 7.9</p>
+                        </div>
+                        <div class="glass-card rounded-lg p-6">
+                            <p class="text-sm text-slate-400">2022</p>
+                            <h4 class="font-bold text-lg text-white">Class XII</h4>
+                            <p class="text-slate-300">Govt. Boys Higher Secondary School, Baroo, Kargil (JKBOSE)</p>
+                             <p class="text-sm text-slate-400">Score: 77.2%</p>
+                        </div>
+                         <div class="glass-card rounded-lg p-6">
+                            <p class="text-sm text-slate-400">2020</p>
+                            <h4 class="font-bold text-lg text-white">Class X</h4>
+                            <p class="text-slate-300">Suru Valley Public School, Kargil (JKBOSE)</p>
+                             <p class="text-sm text-slate-400">Score: 69%</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="awards" class="mb-12 scroll-reveal">
+                    <h3 class="text-xl font-bold text-white mb-4 uppercase tracking-wider">Awards & Competitions</h3>
+                     <div class="space-y-4">
+                        <div class="glass-card rounded-lg p-6">
+                            <h4 class="font-bold text-lg text-white">Best Pitching Team</h4>
+                            <p class="text-sm font-medium text-sky-300">IDE Phase 2 Bootcamp, AICTE & Ministry of Education's Innovation Cell</p>
+                            <p class="mt-2 text-sm text-slate-400">Competed solo against SIH finalists, presenting a project on cost-effective sensor-based Train Track Obstacle Detection to enhance railway safety.</p>
+                        </div>
+                         <div class="glass-card rounded-lg p-6">
+                            <h4 class="font-bold text-lg text-white">Runner-up | AI Odyssey</h4>
+                            <p class="mt-2 text-sm text-slate-400">Competed in multiple time-limited hackathons and AI-based games as part of a team, securing victories in several challenges to achieve the runner-up position.</p>
+                        </div>
+                    </div>
+                </section>
+                
+                <section id="experience" class="mb-12 scroll-reveal">
+                    <h3 class="text-xl font-bold text-white mb-4 uppercase tracking-wider">Volunteer Experience</h3>
+                     <div class="glass-card rounded-lg p-6">
+                        <p class="text-xs text-slate-400 mb-1">Aug 2020 - Dec 2020</p>
+                        <h4 class="font-bold text-lg text-white">Teacher (Community Initiative)</h4>
+                        <p class="text-sm font-medium text-sky-300">UT Ladakh</p>
+                        <p class="mt-2 text-sm text-slate-400">Taught school students in my hometown during the COVID-19 lockdown, addressing the lack of internet access. Collaborated with local undergraduates to ensure continued learning for students affected by the digital divide.</p>
+                    </div>
+                </section>
+                
+                 <section id="languages" class="scroll-reveal">
+                    <h3 class="text-xl font-bold text-white mb-4 uppercase tracking-wider">Languages</h3>
+                     <div class="glass-card rounded-lg p-6">
+                        <p class="text-slate-300">English, Hindi</p>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+
+            const sections = document.querySelectorAll('.scroll-reveal');
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+        });
+    </script>
 </body>
 </html>
